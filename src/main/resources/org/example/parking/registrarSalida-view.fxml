@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="400.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parking.controladores.RegistrarSalidaController">
+
+   <ListView fx:id="salidasListView" GridPane.rowIndex="2"/>
+   <Button fx:id="volver" onAction="#onVolverClick" text="Volver" GridPane.rowIndex="3" />
+
+</GridPane>
