@@ -10,6 +10,8 @@ public class Coche {
     protected float deuda;
     protected int residente; // 0 = oficiales / 1 = residentes / 2 = no residentes
 
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+
     public Coche(String matricula, int residente) {
         this.matricula = matricula;
         this.horaEntrada = LocalDateTime.now();
@@ -46,14 +48,14 @@ public class Coche {
                 this.deuda = 0;
                 break;
             case 1:
-                this.deuda = (float) (calcularTiempoMin(horaEntrada, horaSalida) * 0.002);
+                this.deuda += (float) (calcularTiempoMin(horaEntrada, horaSalida) * 0.002);
                 break;
-            case 2:
+            case 2, 3:
                 this.deuda = (float) (calcularTiempoMin(horaEntrada, horaSalida) * 0.02);
                 break;
             default:
                 break;
-        };
+        }
     }
 
     public int getResidente() {
@@ -64,7 +66,36 @@ public class Coche {
         this.residente = residente;
     }
 
-    public int calcularTiempoMin (LocalDateTime horaEntrada, LocalDateTime horaSalida) {
+    @Override
+    public String toString() {
+        String cadena = "Matrícula: " + matricula;
+        cadena += " Hora Entrada: " + horaEntrada.format(formato);
+        return cadena;
+    }
+
+    public String toStringSinFecha() {
+        String cadena = "Matrícula: " + matricula;
+        return cadena;
+    }
+
+    public String toStringConResidente() {
+        String cadena = "Matrícula: " + matricula;
+        cadena += " Hora Entrada: " + horaEntrada.format(formato);
+        switch (residente) {
+            case 0:
+                cadena += " Tipo de vehiculo: Oficial";
+                break;
+            case 1:
+                cadena += " Tipo de vehiculo: Residente";
+                break;
+            case 2:
+                cadena += " Tipo de vehiculo: No residente";
+                break;
+        }
+        return cadena;
+    }
+
+    public int calcularTiempoMin(LocalDateTime horaEntrada, LocalDateTime horaSalida) {
         int minutosEntrada = (horaEntrada.getMonthValue() * 24 * 60) + (horaEntrada.getDayOfMonth() * 24 * 60) + (horaEntrada.getHour() * 60 + horaEntrada.getMinute());
         int minutosSalida = (horaSalida.getMonthValue() * 24 * 60) + (horaSalida.getDayOfMonth() * 24 * 60) + (horaSalida.getHour() * 60 + horaSalida.getMinute());
         return minutosSalida - minutosEntrada;

@@ -4,42 +4,43 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" hgap="5.0" vgap="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parking.controladores.AltaVehiculosController">
+<GridPane alignment="CENTER" hgap="5.0" style="-fx-background-color: b6b9ff;" vgap="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parking.controladores.AltaVehiculosController">
 
     <Label text="Tipo de vehículo" GridPane.columnIndex="0" GridPane.rowIndex="0" />
     <ComboBox fx:id="comboBoxAlta" prefHeight="25.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
     <Label text="Matrícula" GridPane.rowIndex="2">
-      <GridPane.margin>
-         <Insets bottom="100.0" />
-      </GridPane.margin>
+        <GridPane.margin>
+            <Insets bottom="100.0" />
+        </GridPane.margin>
     </Label>
     <TextField fx:id="inputMatricula" promptText="Ej: 1234ABC" GridPane.rowIndex="2">
-      <GridPane.margin>
-         <Insets bottom="55.0" />
-      </GridPane.margin>
+        <GridPane.margin>
+            <Insets bottom="55.0" />
+        </GridPane.margin>
     </TextField>
 
     <Label text="Lista de coche Oficiales" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-    <ListView fx:id="listCochesOficiales" prefHeight="150" prefWidth="200" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+    <ListView fx:id="listCochesOficiales" prefHeight="150" prefWidth="200" style="-fx-background-color: e2e2e2;" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="2" />
 
     <Label text="Lista de coche Residentes" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-    <ListView fx:id="listCochesResidentes" prefHeight="150" prefWidth="200" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+    <ListView fx:id="listCochesResidentes" prefHeight="150" prefWidth="200" style="-fx-background-color: e2e2e2;" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="2" />
 
     <Label text="Lista de coche NO Residentes" GridPane.columnIndex="4" GridPane.rowIndex="0" />
-    <ListView fx:id="listCochesNOResidentes" prefHeight="150" prefWidth="200" GridPane.columnIndex="4" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+    <ListView fx:id="listCochesNOResidentes" prefHeight="150" prefWidth="200" style="-fx-background-color: e2e2e2;" GridPane.columnIndex="4" GridPane.rowIndex="1" GridPane.rowSpan="2" />
 
     <Label fx:id="createdLabel" prefHeight="17.0" prefWidth="149.0" GridPane.rowIndex="2" />
 
     <Button fx:id="darAlta" onAction="#onDarAltaclick" text="Dar de alta" GridPane.rowIndex="2">
-      <GridPane.margin>
-         <Insets top="10.0" />
-      </GridPane.margin></Button>
+        <GridPane.margin>
+            <Insets top="50.0" />
+        </GridPane.margin>
+    </Button>
 
     <Button fx:id="volver" onAction="#onVolverClick" text="Volver" GridPane.rowIndex="2">
-      <GridPane.margin>
-         <Insets left="90.0" top="10.0" />
-      </GridPane.margin>
+        <GridPane.margin>
+            <Insets left="90.0" top="50.0" />
+        </GridPane.margin>
     </Button>
    <columnConstraints>
       <ColumnConstraints />
@@ -49,7 +50,6 @@
       <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints />
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />

@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" hgap="5" vgap="5" xmlns:fx="http://javafx.com/fxml"
-          fx:controller="org.example.parking.controladores.ParkingController">
+<GridPane alignment="CENTER" hgap="5" prefHeight="208.0" prefWidth="434.0" style="-fx-background-color: b6fffe; -fx-border-color: black;" vgap="5" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parking.controladores.ParkingController">
 
-    <Button text="Registrar entrada" onAction="#onRegistrarEntradaClick"  GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <Button text="Registrar salida" onAction="#onRegistrarSalidaClick"  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-    <Button text="Alta vehiculos" onAction="#onAltaVehiculosClick"  GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <Button text="Comenzar mes" onAction="#onComenzarMesClick"  GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-    <Button text="Pagos de residentes" onAction="#onPagosResidentesClick"  GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <Button text="Salir" onAction="#onSalirClick"  GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Button onAction="#onRegistrarEntradaClick" text="Registrar entrada" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <Button onAction="#onRegistrarSalidaClick" text="Registrar salida" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Button onAction="#onAltaVehiculosClick" text="Alta vehiculos" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <Button onAction="#onComenzarMesClick" text="Comenzar mes" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Button fx:id="pagosResidentesButton" onAction="#onPagosResidentesClick" text="Pagos de residentes" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <Button onAction="#onSalirClick" text="Salir" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <rotationAxis>
+         <Point3D />
+      </rotationAxis></Button>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
 </GridPane>

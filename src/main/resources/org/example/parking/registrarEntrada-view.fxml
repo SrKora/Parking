@@ -4,27 +4,37 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane hgap="5.0" prefHeight="400.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parking.controladores.RegistrarEntradaController">
+<GridPane hgap="5.0" prefHeight="251.0" prefWidth="489.0" style="-fx-background-color: ffc4c4;" vgap="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parking.controladores.RegistrarEntradaController">
 
-    <Label text="Introducir matricula: " GridPane.rowIndex="0"/>
-    <TextField fx:id="inputMatricula" promptText="Ej: 1234ABC" GridPane.rowIndex="1"/>
+    <Label text="Introducir matricula: " GridPane.rowIndex="0" />
+    <TextField fx:id="inputMatricula" promptText="Ej: 1234ABC" GridPane.rowIndex="1" />
 
     <Button onAction="#onRegistrarEntradaClick" text="Registrar entrada" GridPane.rowIndex="2">
-      <GridPane.margin>
-         <Insets bottom="110.0" />
-      </GridPane.margin>
+        <GridPane.margin>
+            <Insets bottom="110.0" />
+        </GridPane.margin>
     </Button>
     <Label fx:id="registeredEntryLabel" prefHeight="17.0" prefWidth="166.0" GridPane.rowIndex="2">
-      <GridPane.margin>
-         <Insets bottom="165.0" />
-      </GridPane.margin>
+        <GridPane.margin>
+            <Insets bottom="165.0" />
+        </GridPane.margin>
     </Label>
 
     <Button fx:id="volver" onAction="#onVolverClick" text="Volver" GridPane.rowIndex="2">
-      <GridPane.margin>
-         <Insets bottom="110.0" left="120.0" />
-      </GridPane.margin>
+        <GridPane.margin>
+            <Insets bottom="110.0" left="120.0" />
+        </GridPane.margin>
     </Button>
-   <ListView prefHeight="195.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2" />
-   <Label prefHeight="17.0" prefWidth="141.0" text="Entradas Registradas:" GridPane.columnIndex="1" />
+
+    <ListView fx:id="list" prefHeight="217.0" prefWidth="313.0" style="-fx-background-color: e2e2e2;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+    <Label prefHeight="17.0" prefWidth="141.0" text="Entradas Registradas:" GridPane.columnIndex="1" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
 </GridPane>
